@@ -32,6 +32,7 @@ class Atm:
             self.createpin()
         else:
             newpin=pin1
+            self.balance=int(input("enter your balance you want to deposit"))
             print("your pin is long enough",newpin)
             self.menu()
     def changepin(self):
@@ -48,5 +49,15 @@ class Atm:
         else:
             print("incorrect pin")
         self.menu()
-    
+    def withdraw(self):
+        newpin2=int(input("enter your pin"))
+        if self.pin==newpin2:
+            amount=int(input("enter amount you want to withdraw"))
+            self.balance=self.balance-amount
+            print("your current balance is",self.balance)
+        else:
+            print("enter correct pin")
+            self.withdraw()
+        self.menu()
+       
 s1=Atm()
