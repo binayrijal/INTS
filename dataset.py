@@ -13,7 +13,7 @@ sns.set(style="white",color_codes=True)
 
 
 
-iris=pd.read_csv("Iris.csv")
+iris=pd.read_csv("archive/Iris.csv")
 iris.head()
 
 
